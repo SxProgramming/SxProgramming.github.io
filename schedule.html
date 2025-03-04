@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario Semanal Python</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .schedule {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .day {
+            background: #1977f3;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .content {
+            display: none;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Horario Semanal Python</h1>
+    <div class="schedule">
+        <div class="day" onclick="toggleContent('monday')">Lunes</div>
+        <div id="monday" class="content">Conceptos básicos de Python: variables, tipos de datos, operadores.</div>
+        
+        <div class="day" onclick="toggleContent('tuesday')">Martes</div>
+        <div id="tuesday" class="content">Estructuras de control: condicionales y bucles.</div>
+        
+        <div class="day" onclick="toggleContent('wednesday')">Miércoles</div>
+        <div id="wednesday" class="content">Funciones y módulos en Python.</div>
+        
+        <div class="day" onclick="toggleContent('thursday')">Jueves</div>
+        <div id="thursday" class="content">Manejo de archivos y excepciones.</div>
+        
+        <div class="day" onclick="toggleContent('friday')">Viernes</div>
+        <div id="friday" class="content">POO en Python: clases y objetos.</div>
+        
+        <div class="day" onclick="toggleContent('saturday')">Sábado</div>
+        <div id="saturday" class="content">Bases de datos con SQLite y Python.</div>
+        
+        <div class="day" onclick="toggleContent('sunday')">Domingo</div>
+        <div id="sunday" class="content">Proyecto final: Integración de conocimientos.</div>
+    </div>
+    
+    <script>
+        function toggleContent(day) {
+            let content = document.getElementById(day);
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
